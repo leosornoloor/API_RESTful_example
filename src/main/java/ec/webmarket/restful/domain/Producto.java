@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Pais {
+public class Producto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +22,18 @@ public class Pais {
 
 	@Column(nullable = false, unique = true)
 	private String nombre;
+	
+
+    @Column(nullable = false)
+    private String descripcion;
 
 	@Column(nullable = false)
-	private LocalDate fechaCreacion;
+	private Double precio;
+	
+	@Column(nullable = false)
+	private int stock;
+	
+    @Column(nullable = false)
+    private LocalDate fechaCreacion;
+	
 }
